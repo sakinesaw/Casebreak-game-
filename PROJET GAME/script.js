@@ -1,8 +1,17 @@
+let boutique = [
+    { nom: "PC Élite", prix: 10, quantite: 0, puissance: 1 },
+    { nom: "Connexion Fibre Pro", prix: 50, quantite: 0, puissance: 5 },
+    { nom: "Serveur Dédié", prix: 250, quantite: 0, puissance: 25 },
+    { nom: "IA de Forçage", prix: 1250, quantite: 0, puissance: 125 },
+    { nom: "Supercalculateur Quantique", prix: 7000, quantite: 0, puissance: 700 }
+];
+
 const boutonCoffre = document.querySelector('#bouton-coffre');
 const montantGagne = document.querySelector('#argent')
-const boutiqueBouton = document.querySelector('#achat-PC')
-const nombrePc = document.querySelector('#nb-pc')
-const montantPc = document.querySelector('#prix-pc')
+
+const boutonsBoutique = document.querySelectorAll('.bouton-shop');
+const affichagesPrix = document.querySelectorAll('.prix-produit');
+const affichagesQuantite = document.querySelectorAll('.quantite-produit');
 
 // bloque le bouton de la boutique au démarrage
 boutiqueBouton.disabled = true; 
