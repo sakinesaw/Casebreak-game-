@@ -50,12 +50,8 @@ boutiqueBouton.addEventListener('click', () =>{
     butin = butin - prixPC ; 
     nbrPC = nbrPC + 1;
 
-    if (nbrPC >= 5){
-        prixPC = prixPC * 1.5;
-    } 
-
-    else{
-        prixPC = prixPC
+    if (nbrPC % 5 === 0){
+        prixPC = prixPC *1.5;
     } 
 
     montantGagne.textContent = butin.toFixed(2);
