@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #fff0f5; /* Rose très pâle (LavenderBlush) */
+    color: #ff69b4; /* Rose chaud (HotPink) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police plus douce */
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    box-sizing: border-box;
+}
+
+.jeu-container {
+    width: 100%;
+    max-width: 450px;
+    border: 4px solid #ffb6c1; 
+    padding: 20px;
+    background-color: #ffffff; 
+    box-shadow: 0 8px 0 #ffb6c1; 
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #ff1493;
+    font-size: 1.4rem;
+    margin-top: 0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h1::before, h1::after{
+    content : "💰"
+}
+
+.banque {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    font-weight: bold;
+    background-color: #fff0f5;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px dashed #ffb6c1;
+    text-align: center;
+}
+
+.zone-coffre {
+    margin: 25px 0;
+}
+
+#bouton-coffre {
+    background-color: #ffb6c1;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 6px 0 #ff69b4; /* Ombre du bouton */
+    transition: all 0.1s;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#bouton-coffre::before{
+    content:"🏦"
+}
+
+#bouton-coffre:active {
+    transform: translateY(6px); /* Le bouton s'enfonce proprement */
+    box-shadow: 0 0px 0 #ff69b4;
+}
+
+.boutique {
+    margin-top: 25px;
+    border-top: 2px dashed #ffb6c1;
+    padding-top: 15px;
+}
+
+.boutique h3 {
+    font-size: 1.1rem;
+    color: #ff69b4;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.bouton-shop {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 4px 0 #c71585;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.1s;
+}
+
+.bouton-shop:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #c71585;
+}
+
+.bouton-shop:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    box-shadow: 0 4px 0 #b0b0b0;
+    cursor: not-allowed;
+}
