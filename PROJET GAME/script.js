@@ -14,7 +14,9 @@ const affichagesPrix = document.querySelectorAll('.prix-produit');
 const affichagesQuantite = document.querySelectorAll('.quantite-produit');
 
 // bloque le bouton de la boutique au démarrage
-boutiqueBouton.disabled = true; 
+boutonsBoutique.forEach((bouton) => {
+    bouton.disabled = true;
+});
 
 // Variable qui stocke l'argent du joueur
 let butin = 0;
@@ -22,24 +24,20 @@ let butin = 0;
 // Variable valeur d'un clic en fonction des ameliorations
 let puissanceClic = 1; 
 
-// Variable compteur ordinateur 
-let nbrPC = 0;
-
-// Prix du pc initial
-let prixPC = 10;
-
 
 // Fonction qui vérifie le montant du butin actuel pour activer ou désactiver le bouton boutique
 
 function verifierBoutique() {
 
-        if (butin >= prixPC){
-        boutiqueBouton.disabled = false;
+    boutonsBoutique.forEach((bouton, index) => {
+         if (butin >= boutique[index].prix){
+        bouton.disabled = false;
     }
 
     else{
-        boutiqueBouton.disabled = true;
+        bouton.disabled = true;
     }
+    });
 }
 
 // actions lors du clic sur le coffre : gagner de l'argent
@@ -70,7 +68,3 @@ boutiqueBouton.addEventListener('click', () =>{
 
     verifierBoutique()
 });
-
-
-
-
