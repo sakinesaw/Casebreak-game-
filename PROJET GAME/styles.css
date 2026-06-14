@@ -113,6 +113,10 @@ h1::before, h1::after{
     width: 100%;
     box-sizing: border-box;
     transition: all 0.1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .bouton-shop:active:not(:disabled) {
@@ -125,4 +129,8 @@ h1::before, h1::after{
     color: #a0a0a0;
     box-shadow: 0 4px 0 #b0b0b0;
     cursor: not-allowed;
+}
+
+.produit{
+    font-size: 1.2rem;
 }
