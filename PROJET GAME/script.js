@@ -52,19 +52,21 @@ boutonCoffre.addEventListener('click', () => {
 
 // actions lors du clic sur la boutique : acheter un PC Elite
 
-boutiqueBouton.addEventListener('click', () =>{
+boutonsBoutique.forEach((bouton, index) => {
+    bouton.addEventListener('click', () =>{
 
-    butin = butin - prixPC ; 
-    nbrPC = nbrPC + 1;
+    butin = butin - boutique[index].prix ; 
+    boutique[index].quantite = boutique[index].quantite + 1;
 
-    if (nbrPC % 5 === 0){
+    if (boutique[index].quantite % 5 === 0){
+        boutique[index].prix = boutique[index].prix *1.5
     } 
 
     montantGagne.textContent = butin.toFixed(2);
-    nombrePc.textContent = nbrPC;
-    montantPc.textContent = prixPC.toFixed(2); 
+    affichagesQuantite[index].textContent = boutique[index].quantite;
+    affichagesPrix[index].textContent = boutique[index].prix.toFixed(2); 
 
-    puissanceClic = puissanceClic + 1 ; 
+    puissanceClic = puissanceClic + boutique[index].puissance ; 
 
     verifierBoutique()
-});
+})});
