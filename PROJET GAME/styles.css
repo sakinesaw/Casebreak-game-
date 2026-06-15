@@ -95,6 +95,9 @@ h1::before, h1::after{
     margin-top: 25px;
     border-top: 2px dashed #ffb6c1;
     padding-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 6px;
 }
 
 .boutique h3 {
@@ -102,13 +105,14 @@ h1::before, h1::after{
     color: #ff69b4;
     margin-bottom: 15px;
     text-align: center;
+    grid-column: span 2;
 }
 
 .bouton-shop {
     background-color: #ff1493;
     color: white;
     border: none;
-    padding: 12px 15px;
+    padding: 15px 10px;
     cursor: pointer;
     font-family: inherit;
     font-size: 0.95rem;
@@ -118,10 +122,18 @@ h1::before, h1::after{
     width: 100%;
     box-sizing: border-box;
     transition: all 0.1s;
+
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 4px;
+    text-align: center;
+    gap: 8px;
+    min-height: 130px;
+}
+
+.bouton-shop:last-child {
+    grid-column: span 2; 
 }
 
 .bouton-shop:active:not(:disabled) {
