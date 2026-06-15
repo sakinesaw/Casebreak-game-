@@ -53,6 +53,11 @@ h1::before, h1::after{
     text-align: center;
 }
 
+#passif {
+    padding : 2px;
+    font-size: 0.75rem;
+}
+
 .zone-coffre {
     margin: 25px 0;
 }
@@ -134,3 +139,4 @@ h1::before, h1::after{
 .produit{
     font-size: 1.2rem;
 }
+

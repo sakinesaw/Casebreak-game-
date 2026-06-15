@@ -13,6 +13,8 @@ const boutonsBoutique = document.querySelectorAll('.bouton-shop');
 const affichagesPrix = document.querySelectorAll('.prix-produit');
 const affichagesQuantite = document.querySelectorAll('.quantite-produit');
 
+const affichageVitesse = document.querySelector('#vitesse-gain');
+
 // bloque le bouton de la boutique au démarrage
 boutonsBoutique.forEach((bouton) => {
     bouton.disabled = true;
@@ -78,5 +80,7 @@ setInterval(() => { let gainSeconde = 0;
     butin = butin + gainSeconde
 
     montantGagne.textContent = butin.toFixed(2);
+    affichageVitesse.textContent = gainSeconde.toFixed(2);
+
     verifierBoutique() }
     , 1000);
