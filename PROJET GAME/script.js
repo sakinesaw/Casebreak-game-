@@ -58,15 +58,11 @@ boutonsBoutique.forEach((bouton, index) => {
     butin = butin - boutique[index].prix ; 
     boutique[index].quantite = boutique[index].quantite + 1;
 
-    if (boutique[index].quantite % 5 === 0){
-        boutique[index].prix = boutique[index].prix *1.5
-    } 
+    boutique[index].prix = boutique[index].prix *1.15
 
     montantGagne.textContent = butin.toFixed(2);
     affichagesQuantite[index].textContent = boutique[index].quantite;
     affichagesPrix[index].textContent = boutique[index].prix.toFixed(2); 
-
-    puissanceClic = puissanceClic + boutique[index].puissance ; 
 
     verifierBoutique()
 })});
