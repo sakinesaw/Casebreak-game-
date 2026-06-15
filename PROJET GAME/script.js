@@ -27,6 +27,27 @@ let butin = 0;
 let puissanceClic = 1; 
 
 
+if (localStorage.getItem('butinCodeBreaker') !== null) {
+    butin = parseFloat(localStorage.getItem('butinCodeBreaker'));
+    boutique = JSON.parse((localStorage.getItem('boutiqueCodeBreaker')));
+
+    montantGagne.textContent = butin.toFixed(2);
+
+    let passifAuDemarrage = 0;
+
+    boutonsBoutique.forEach((bouton, index) => {
+    affichagesQuantite[index].textContent = boutique[index].quantite;
+    affichagesPrix[index].textContent = boutique[index].prix.toFixed(2); 
+
+    passifAuDemarrage = passifAuDemarrage + boutique[index].quantite * boutique[index].puissance;
+    });
+
+    affichageVitesse.textContent = passifAuDemarrage.toFixed(2);
+
+
+    verifierBoutique(); 
+    }
+
 
 // Fonction qui vérifie le montant du butin actuel pour activer ou désactiver le bouton boutique
 
@@ -82,5 +103,13 @@ setInterval(() => { let gainSeconde = 0;
     montantGagne.textContent = butin.toFixed(2);
     affichageVitesse.textContent = gainSeconde.toFixed(2);
 
-    verifierBoutique() }
+    verifierBoutique()
+    sauvegarderJeu()
+    }
     , 1000);
+
+
+function sauvegarderJeu(){
+    localStorage.setItem('butinCodeBreaker', butin);
+    localStorage.setItem('boutiqueCodeBreaker', JSON.stringify(boutique));
+}
