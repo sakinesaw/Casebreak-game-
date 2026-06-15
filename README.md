@@ -14,11 +14,15 @@ C'est pour cela que j'ai lancé ce projet : pour apprendre sur le terrain en dé
 ---
 
 ## 🛠️ Ce qui fonctionne déjà 
-* Le bouton rose du coffre est connecté au JS.
-* Le butin augmente de 1 € à chaque clic et s'affiche en direct sur l'écran.
-* Le bouton de la boutique se débloque automatiquement dès que le butin atteint 10 €.
+* **Système de clic** : Le bouton rose du coffre est connecté au JS. Le butin augmente à chaque clic et s'affiche en direct.
+* **Boutique dynamique** : Les boutons d'améliorations (PC Élite, Fibre Pro, Serveur Dédié, IA, Calculateur Quantique) s'activent et se grisent automatiquement selon le butin disponible.
+* **Gestion des achats** : L'achat déduit correctement le coût du butin, augmente le prix de l'amélioration de manière exponentielle et incrémente la quantité possédée.
+* **Revenu Passif** : Calcul en temps réel de la vitesse de hachage ($ €/s) et génération automatique du butin chaque seconde.
+* **Sauvegarde Automatique** : Intégration du `localStorage` avec conversion JSON pour sauvegarder et charger instantanément la progression (butin, prix, quantités, revenus passifs) à chaque actualisation.
 
 ## 📈 À faire ensuite
-- [ ] Gérer l'achat du "PC Élite" et déduire les 10 € du butin.
-- [ ] Ajouter des multiplicateurs de clics.
-- [ ] Sauvegarder le score (`localStorage`).
+- [ ] **Bouton Reset (Outil de test)** : Ajouter un bouton pour effacer le `localStorage` et remettre toutes les variables à zéro instantanément.
+- [ ] **Multiplicateurs de clics** : Faire évoluer la puissance du clic manuel (via des améliorations dédiées ou des paliers).
+- [ ] **Système de Prestige / Reset global** : Permettre de réinitialiser le jeu en échange de bonus permanents (multiplicateurs globaux).
+- [ ] **Événements aléatoires** : Ajouter des bonus temporaires qui apparaissent à l'écran (ex: "Hack bonus : clics x2 pendant 15s").
+- [ ] **Animations et Polish** : Ajouter un effet visuel de texte flottant (ex: "+1€") à l'endroit exact où l'on clique sur le coffre.
