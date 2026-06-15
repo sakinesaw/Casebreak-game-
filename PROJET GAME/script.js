@@ -25,6 +25,7 @@ let butin = 0;
 let puissanceClic = 1; 
 
 
+
 // Fonction qui vérifie le montant du butin actuel pour activer ou désactiver le bouton boutique
 
 function verifierBoutique() {
@@ -66,3 +67,16 @@ boutonsBoutique.forEach((bouton, index) => {
 
     verifierBoutique()
 })});
+
+
+setInterval(() => { let gainSeconde = 0; 
+    
+    boutonsBoutique.forEach((bouton, index) => {
+    gainSeconde = gainSeconde + boutique[index].quantite * boutique[index].puissance
+    }); 
+    
+    butin = butin + gainSeconde
+
+    montantGagne.textContent = butin.toFixed(2);
+    verifierBoutique() }
+    , 1000);
